@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: Railway demo
+
+  datasource:
+    username: root
+    password: ${{MYSQL_ROOT_PASSWORD}}
+    url: jdbc:mysql://${{MYSQLUSER}}:${{MYSQL_ROOT_PASSWORD}}@${{RAILWAY_TCP_PROXY_DOMAIN}}:${{RAILWAY_TCP_PROXY_PORT}}/${{MYSQL_DATABASE}}
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
